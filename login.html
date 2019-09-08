@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"> 
+	<title>Bootstrap 实例 - 引导主体副本</title>
+	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">  
+	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <style>
+    .login {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .input {
+        margin-top: 16%;
+
+    }
+
+    .center {
+        text-align: center;
+        
+    }
+
+    .list {
+    display: flex;
+    width: 100%;
+    height:80px;
+    justify-content:center;
+    align-items:center;
+}
+
+.a {
+    height: 40px;
+    width: 50%;
+    margin-left: 40px;
+    margin-right: 30px;
+    
+}
+
+.element {
+    font-weight: bold;
+    font-size: 17px;
+    width: 70px;
+    float: left;
+    
+}
+
+    
+    </style>
+
+
+</head>
+<body>
+<div class="login">
+    <div>
+    <h2 style="text-align: center;">梧桐树下</h2>
+    </div>
+    
+        <form class="input" method="POST" action="login.php">
+            
+            <p style="text-align: center; font-weight: bold; font-size: 23px; margin-bottom: 30px;">报名表管理系统登录</p> 
+
+            <p><lable class="element">手机号：</lable>
+                <input type="text" name="username" class="form-control"/>
+            </p>
+
+            <p><lable class="element">密码：</lable>
+                <input type="password" name="password" class="form-control"/></p>
+
+
+            <input type="submit" value="登录" class="btn btn-info my-choose-item center" style="float: left;"/>
+            <input type="button" value="注册" onclick="window.location='new.html'" class="btn btn-info my-choose-item center" style="float: right"/>
+        </form>
+</div>
+
+
+</body>
+</html>

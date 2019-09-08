@@ -1,0 +1,86 @@
+.form-list {
+    width: 95%;
+    min-height: 100px;
+    background-color: #ffffff;
+    border: 2px;
+    border-radius: 8px;
+    margin-top: 20px;
+    margin: 0 auto;
+    text-align: center;
+    border: 1.1px solid #ccc;
+    overflow: auto;
+    zoom:1;
+}
+
+.form-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-element {
+    margin: 5px 1%;
+    float: left;
+    width: 98%;
+    height: 30px;
+    
+    background-color: #e5e5e5;
+}
+
+.form-element p {
+    display: inline-block;
+    text-align: left;
+    width: 13.5%;
+    margin-left: 2px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.form-public {
+    margin: 5px 1%;
+    float: left;
+    width: 98%;
+    height: 30px;
+    border: 1.1px solid #ccc;
+    background-color: #e5e5e5;
+}
+
+.form-public p {
+    display: inline-block;
+    text-align: left;
+    width: 13.5%;
+    margin-left: 2px;
+    font-size: 15px;
+}
+
+.content {
+    padding-top: 10px;
+    border: "2";
+    width: 98%;
+    text-align: left;
+    border-spacing: 10px;
+
+    border-collapse:separate; 
+    border-spacing:0px 0px;
+    margin: 0 auto;
+    
+}
+
+.content thead {
+    padding-top: 15px;
+    background-color: #e5e5e5;
+    font-size: 17px;
+    height: 40px;
+}
+
+
+.content tbody tr {
+    background-color: #ffffff;
+    height: 35px;
+    border: 2px solid rgb(230, 89, 89);
+}
+
+.content tbody td {
+    border-top: 1px solid #e5e5e5;
+}
+

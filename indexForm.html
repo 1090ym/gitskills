@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bootstrap/mycss/menu.css">
+    <link rel="stylesheet" href="bootstrap/mycss/index.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    
+      
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="bootstrap/myjs/form.js"></script>
+    <script src="bootstrap/myjs/index.js"></script>
+    <title>导航</title>
+
+
+</head>
+
+<body style="background-color:#F0F0F0" onload="load_info()">
+        
+    <div id="h">
+        梧桐树下
+    </div>
+    <div id="n">
+        <ul id="Menu">
+            <li><a href="index.html" style="
+                background-color:#666665;
+                color:#ffffff;" id="index" onclick="add()">首页</a></li>
+            <li><a href="test.html">创建报名表</a></li>
+            <li><a href="showForm.html">我的报名表</a></li>
+            <li><a href="person.html">个人</a></li>
+        </ul>
+    </div>
+
+    <div id="form-list" class="form-list">
+            <table class="content">
+                <thead>
+                    <tr>
+                        <th>发布时间</th>
+                        <th>报名表名字</th>
+                        <th>所属社团</th>
+                        <th>发布人</th>
+                        <th>填写</th>
+                        <th>状态</th>
+                        <th>报名人数</th>
+                    </tr>
+                </thead>
+                 <tbody id="list-info">
+                     
+
+
+                </tbody>
+            </table>
+
+    </div>
+</body>
+
+</html>
+

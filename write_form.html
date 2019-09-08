@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">  
+    <link rel="stylesheet" href="bootstrap/mycss/create_form.css">
+    
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="bootstrap/myjs/write_form.js"></script>
+    <title>导航</title>
+
+</head>
+
+<body style="background-color:#F0F0F0" onload="writeForm()">
+    <div class = "list" style="margin-top: 60px;">
+        <div class="element">
+            活动名称
+        </div>
+        <div  id="ipInput" class="a">
+        <input  type="text" class="form-control" name="form_name" id="form_name" disabled="disabled" value="梧桐树下">
+        </div>
+    </div>
+
+    <div class = "list">
+        <div class="element">
+            活动信息
+        </div>
+        <div  id="ipInput" class="a" >
+            <textarea class="form-control" style="height: 160px;" name="form_info" id="form_info" disabled="disabled" placeholder="请介绍自己..."></textarea>
+        </div>
+    </div>
+
+    <div class="my-title h3 center" style="margin-top: 120px;">填写报名信息</div>
+
+    <div class="my-choose-container center" id="choose_container">
+			
+        
+    </div>
+
+    <div class="row form-group">
+        <div class="col-lg-6 col-md-offset-2 col-md-6">
+            <input type="button" onclick="sub()" class="btn btn-success" value="提交">
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

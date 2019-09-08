@@ -1,0 +1,51 @@
+.info-list {
+    width: 65%;
+    min-height: 100px;
+    background-color: #ffffff;
+    border: 2px;
+    border-radius: 8px;
+    margin-top: 300px;
+    margin: 100px auto;
+    
+    border: 1.1px solid #ccc;
+    overflow: auto;
+    zoom:1;
+}
+
+
+.content {
+    padding-top: 10px;
+    border: "2";
+    width: 98%;
+    text-align: left;
+    border-spacing: 10px;
+
+    border-collapse:separate; 
+    border-spacing:0px 0px;
+    margin: 0 auto;
+    
+}
+
+.form-list {
+    width: 95%;
+    min-height: 100px;
+    background-color: #ffffff;
+    border: 2px;
+    border-radius: 8px;
+    margin-top: 20px;
+    margin: 0 auto;
+    text-align: center;
+    border: 1.1px solid #ccc;
+    overflow: auto;
+    zoom:1;
+}
+
+input {
+    border:none;
+    
+}
+
+input:disabled {
+    color: #ffffff;
+    opacity: 1;
+}

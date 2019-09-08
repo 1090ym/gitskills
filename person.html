@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap/mycss/create_form.css">  
+    <link rel="stylesheet" href="bootstrap/mycss/person.css">
+
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="bootstrap/myjs/person.js"></script>
+
+    <title>导航</title>
+    <style type="text/css">
+      
+        input[disabled]{background:#fff;opacity:1;color:black;}
+    
+</style>
+</head>
+
+<body style="background-color:#F0F0F0" onload="get_personInfo()">
+    <div id="h">
+        梧桐树下
+    </div>
+    <div id="n">
+        <ul>
+            <li><a href="indexForm.html">首页</a></li>
+            <li><a href="test.html">创建报名表</a></li>
+            <li><a href="showForm.html">我的报名表</a></li>
+            <li><a href="person.html" style="
+                background-color:#666665;
+                color:#ffffff;">个人</a></li>
+        </ul>
+    </div>
+
+    <div class="info-list">
+            <table width="360" border="0" align="center" cellpadding="5" cellspacing="10" >
+
+                    <tr>
+                            
+                            <td  height="120">
+                                <a href="#" title="填写报名表"><img id="user_img" src="./images/icons/pencil.png" alt="头像" style="width: 50px;height: auto;text-align: left" /></a>
+                            </td>
+                            <td height="25"><input name="textfield" type="text" id="img-nickname" size="33" value="未设置昵称" disabled="disabled"></td>
+                            </tr>
+                    <tr>
+                        <td width="160" height="25">账号：</td>
+                        <td width="310"><input name="name" type="text" id="username" size="33" disabled="disabled" value="未设置账号"></td>
+                    </tr>
+            
+                    <tr>
+                        <td height="25">昵称：</td>
+                        <td width="310"><input name="textfield" type="text" id="nickname" size="33" value="未设置昵称" disabled="disabled"></td>
+                    </tr>
+                    
+                    
+            
+                    <tr>
+                        <td height="25" colspan="2" align="center">
+                            <input type="button" name="alter" value="修改">
+                            <input type="button" name="preserve" value="保存">
+                        </td>
+                    </tr>
+                </table>
+    </div>
+
+
+</body>
+
+</html>
