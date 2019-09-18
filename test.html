@@ -381,15 +381,15 @@
             
             var name = document.getElementById("form_name").value;
             var info = document.getElementById("form_info").value;
+            var organ = document.getElementById("organization_name").value;
 
             $.ajax({
               type: "post",
-              url: "demo.php",
+              url: "./php/demo.php",
               data: {question: questionData,
                      form_name: name,
                      form_info: info,
-                     user_id: 1,
-                     organizationID: 1
+                     organization_name: organ
                     },
               dataType: "json",//回调函数接收数据的数据格式
               success: function(msg){
@@ -449,6 +449,16 @@
             <input  type="text" class="form-control" name="form_name" id="form_name">
             </div>
             <button class="undelete" type="button" value="删除"  title="删除" disabled="disabled"></button>
+    </div>
+
+    <div class = "list">
+        <div class="element">
+            社团名称
+        </div>
+        <div  id="ipInput" class="a">
+        <input  type="text" class="form-control" name="organization_name" id="organization_name">
+        </div>
+        <button class="undelete" type="button" value="删除"  title="删除" disabled="disabled"></button>
     </div>
 
     <div class = "list">

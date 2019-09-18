@@ -1,4 +1,5 @@
 <?php
+    session_start();
     header('Content-type:text/json;charset=utf8');
     $question=$_POST['question'];
     /*$question=[                                     
@@ -16,20 +17,25 @@
     
     $form_info = $_POST['form_info'];
     //$form_info = "test";
+
     
-    $user_id = $_POST['user_id'];
+    
+    $user_id = $_SESSION['user_id'];
+    $user_nickname = $_SESSION['nickname'];
     //$user_id = 1;
+    //$user_nickname = "尹卯";
     
     $dbName = "PocketCampus";
 
-    $organizationID = $_POST['organizationID'];
-    //$organizationID = 1;
+    $organization_name = $_POST['organization_name'];
+    //$organization_name = "报名";
+    $organizationID = 1;
 
     date_default_timezone_set('PRC');
     $Time = date('Y-m-d H:i:s',time());
     $question_json = json_encode($question,JSON_UNESCAPED_UNICODE);
 
-    $sql = "INSERT INTO entryForm(entryForm_name, entryForm_info, entryForm_userID, entryForm_date, entryForm_json, entryForum_organizationID) VALUES('$form_name', '$form_info', '$user_id', '$Time', '$question_json', '$organizationID')";
+    $sql = "INSERT INTO entryForm(entryForm_name, entryForm_info, entryForm_userID, entryForm_userNickname, entryForm_date, entryForm_json, entryForm_organizationID, entryForm_organization_name ) VALUES('$form_name', '$form_info', '$user_id', '$user_nickname', '$Time', '$question_json', '$organizationID', '$organization_name')";
 
     
 

@@ -10,12 +10,29 @@
 
 var answer_data;
 
+function GetRequest() {
+    var url = location.search; //获取url中"?"符后的字串
+    var theRequest = new Object();
+    if (url.indexOf("?") != -1) {
+        var str = url.substr(1);
+        strs = str.split("&");
+        for(var i = 0; i < strs.length; i ++) {
+            theRequest[strs[i].split("=")[0]]=unescape(strs[i].split("=")[1]);
+        }
+    }
+    return theRequest;
+}
+  
+
 //从后台获取题目的json数据并显示
-function writeForm(){               
+function writeForm(){
+    
+    var form_id = GetRequest().form_id;
+    console.log(form_id);     
     $.ajax({
         type: "post",
-        url: "show_entryform.php",
-        data: {entryform_id: 21
+        url: "./php/show_entryform.php",
+        data: {entryform_id: form_id
               },
         dataType: "json",//回调函数接收数据的数据格式
         success: function(msg){
@@ -33,7 +50,33 @@ function writeForm(){
           console.log(msg);//抛出错误
         }
       });
+
+};
+
+function writeForm_session(){
     
+    var form_id = GetRequest().form_id;
+    console.log(form_id);
+    
+    var form_data = "form_data"+form_id;                                //获取对应报名表的缓存数据属性名
+    
+    var form_storage = JSON.parse(window.sessionStorage[form_data]);
+    console.log(form_storage);
+
+    var form_name = document.getElementById("form_name");               //显示报名表名称
+    form_name.value = form_storage.entryForm_name;
+
+    var form_info = document.getElementById("form_info");               //显示报名表名称
+    form_info.value = form_storage.entryForm_info;
+
+    var organization_name = document.getElementById("organization_name");               //显示报名表名称
+    organization_name.value = form_storage.entryForm_organization_name;
+
+    
+    var data_json = form_storage.entryForm_json;
+    var question = JSON.parse(data_json);
+    console.log(question);
+    show_question(question); 
 };
 
 //显示题目信息
@@ -213,7 +256,7 @@ function submit_answer(answer_data,form_id,user_id) {
                                                                   //将数据提交到后台
     $.ajax({
       type: "post",
-      url: "submit_answer.php",
+      url: "./php/submit_answer.php",
       data: {
                 answer_data: answer_data,
                 form_id: form_id,
@@ -252,8 +295,10 @@ function submit(obj) {                                                          
 }
 
 function sub() {
-    form_id = 21;
-    user_id = 2;
+    var form_id = GetRequest().form_id;  //获取报名表id
+    
+    var user_id = getCookieValue("user_id");    //获取用户id
+    
     var i = 1;
     var j = 0;
     var Name;
@@ -281,6 +326,16 @@ function sub() {
     
 }
 
+function getCookieValue(cookieName) {           //获取cookie值
+    var strCookie = document.cookie;
+    var arrCookie = strCookie.split(";");
+    for(var i=0; i<arrCookie.length; i++) {
+        var arr = arrCookie[i].split("=");
+        if(arr[0] == cookieName)
+            return arr[1];
+    }
+    return "";
+}
 
 
 

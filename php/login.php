@@ -22,7 +22,7 @@
 
             echo '<script>
                     alert("登录成功");
-                    window.location.href="indexForm.html";
+                    window.location.href="../indexForm.html";
                 </script>';
         } else {
             echo '<script>

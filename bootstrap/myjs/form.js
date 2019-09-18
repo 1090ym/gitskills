@@ -244,7 +244,7 @@
 
             $.ajax({
               type: "post",
-              url: "demo.php",
+              url: "./php/demo.php",
               data: {question: questionData,
                      form_name: name,
                      form_info: info,
